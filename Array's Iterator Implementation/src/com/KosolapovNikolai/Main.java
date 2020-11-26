@@ -9,7 +9,7 @@ public class Main {
         Integer[] ages = new Integer[]{10 , 23 , 34 , 90 , 24};
         ArrayIteratorImpl<Integer> agesIterator = new ArrayIteratorImpl<>(ages);
         agesIterator.next();
-        agesIterator.remove1();
+        agesIterator.remove();
         while (agesIterator.hasNext()) {
             System.out.println(agesIterator.next());
         }
