@@ -19,7 +19,7 @@ public class Main {
                 hash = (hash * aConstant) + components[hashIndex];
             }
         }
-        return hash; // ASCII (1ST component) * a⁰ + ASCII(2ND component) * a¹ + ... + ASCII(Nth component) * aⁿ⁻¹. IMPORTANT: a - constant, which should be > 1, because if a = 0 , or a = 1 polynomial accumulation's result == component sum's result.
+        return hash; // ASCII (1ST component) * a⁰ + ASCII(2ND component) * a¹ + ... + ASCII(Nth component) * aⁿ⁻¹. IMPORTANT: a - constant, which should be > 1, because if a = 0 , a = 1 we will get 0.
     }
     public static void main(String[] args) {
 
@@ -31,7 +31,7 @@ public class Main {
         if(componentSumHash("dog") == componentSumHash("god")){
             System.out.println("COLLISION!");
         } else {
-            System.out.println("Hashes are different");
+            System.out.println("Hashes are different!");
         }
         System.out.println("________________________");
         System.out.println("Polynomial accumulation results:");
@@ -42,7 +42,7 @@ public class Main {
         if(polynomialAccumulationHash("dog" , 31) == polynomialAccumulationHash("god" , 31)){
             System.out.println("COLLISION!");
         } else {
-            System.out.println("Hashes are different");
+            System.out.println("Hashes are different!");
         }
         System.out.println("________________________");
     }
