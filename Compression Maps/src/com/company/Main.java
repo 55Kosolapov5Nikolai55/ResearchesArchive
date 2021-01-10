@@ -11,7 +11,7 @@ public class Main {
     }
 
     public static int compressingA(Integer key , double A , int n){
-        int index = (int) (n * (key * A) % 1);
+        int index = (int) (n * (key * A % 1));
         if(index < 0){
             return -index;
         }
@@ -19,8 +19,8 @@ public class Main {
     }
 
     public static int compressingFibonacci(Integer key , int n){
-        double A = (Math.sqrt(5) - 1) / 2;
-        int index = (int) (n * (key * A) % 1);
+        double A = (Math.sqrt(5d) - 1) % 1;
+        int index = (int) (n * (key * A % 1));
         return index;
     }
 
@@ -54,4 +54,4 @@ public class Main {
         values3[compressingMAD(888 , 9 , 5 ,n)] = "Multiply And Divide compression.";
         System.out.println(values3[compressingMAD(888 , 9 , 5 ,n)]);
     }
-}
+} 
