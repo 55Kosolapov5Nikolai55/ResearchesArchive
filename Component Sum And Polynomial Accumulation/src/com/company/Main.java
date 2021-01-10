@@ -15,11 +15,13 @@ public class Main {
         int hash = 0;
         if(aConstant > 1) {
             char[] components = stringToHash.toCharArray();
-            for(int hashIndex = components.length -1; hashIndex >= 0; hashIndex --){
+            for (int hashIndex = components.length - 1; hashIndex >= 0; hashIndex--) {
                 hash = (hash * aConstant) + components[hashIndex];
             }
+            return hash; // ASCII (1ST component) * a⁰ + ASCII(2ND component) * a¹ + ... + ASCII(Nth component) * aⁿ⁻¹. IMPORTANT: a - constant, which should be > 1, because if a = 0 we will get ASCII-code of first component, a = 1 - polynomial accumulation = component sum.
         }
-        return hash; // ASCII (1ST component) * a⁰ + ASCII(2ND component) * a¹ + ... + ASCII(Nth component) * aⁿ⁻¹. IMPORTANT: a - constant, which should be > 1, because if a = 0 , a = 1 we will get 0.
+        System.out.println("Constant value is incorrect!");
+        return -1;
     }
     public static void main(String[] args) {
 
@@ -39,7 +41,7 @@ public class Main {
         System.out.println(polynomialAccumulationHash("dog" , 31));
         System.out.println(polynomialAccumulationHash("god" , 31));
 
-        if(polynomialAccumulationHash("dog" , 31) == polynomialAccumulationHash("god" , 31)){
+        if (polynomialAccumulationHash("dog" , 31) == polynomialAccumulationHash("god" , 31)){
             System.out.println("COLLISION!");
         } else {
             System.out.println("Hashes are different!");
