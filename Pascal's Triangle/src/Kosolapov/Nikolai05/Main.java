@@ -24,17 +24,17 @@ public class Main {
     }
 
     public static int[][] getPascalTriangleFromKToJ(int k, int j) {
-        int[][] triangle = new int[j - k][j];
+        int[][] triangle = new int[(j + 1) - k][j];
         if (j > k) {
-            int getIndex = k + 1;
-            for (int fill = 0; fill < j - k; fill ++) {
+            int getIndex = k;
+            for (int fill = 0; fill < (j + 1) - k; fill ++) {
                 triangle[fill] = getNRow(getIndex);
                 getIndex ++;
             }
         }
         return triangle;
     }
-    
+
     public static void displayTriangle(int [][] triangle) {
         for (int displayHorizontal = 0; displayHorizontal < triangle.length; displayHorizontal ++) {
             for (int displayVertical = 0; displayVertical < triangle[displayHorizontal].length; displayVertical ++) {
@@ -71,13 +71,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[][] testTriangle = getPascalTriangle(10);
+        int[][] testTriangle = getPascalTriangle(3);
         displayTriangle(testTriangle);
         System.out.println("_________________________");
-        int[] testRow = getNRow(7);
+        int[] testRow = getNRow(4);
         displayRow(testRow);
         System.out.println("_________________________");
-        int[][] testKToJTriangle = getPascalTriangleFromKToJ(3 , 8);
+        int[][] testKToJTriangle = getPascalTriangleFromKToJ(1 , 3);
         displayTriangle(testKToJTriangle);
         System.out.println("_________________________");
         displayRevertedTriangle(testTriangle);
