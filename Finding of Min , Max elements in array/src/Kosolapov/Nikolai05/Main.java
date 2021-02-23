@@ -5,7 +5,7 @@ public class Main {
     public static void findMinNumberInArray(int[] numbers){
         int minValue = numbers[0];
         int minIndex = 0;
-        for(int minFindIndex = 0; minFindIndex < numbers.length; minFindIndex ++){
+        for(int minFindIndex = 1; minFindIndex < numbers.length; minFindIndex ++){
             if(minValue > numbers[minFindIndex]){
                 minIndex = minFindIndex;
                 minValue = numbers[minFindIndex];
@@ -18,7 +18,7 @@ public class Main {
     public static void findMaxNumberInArray(int [] numbers){
         int maxValue = numbers[0];
         int maxIndex = 0;
-        for(int maxFindIndex = 0; maxFindIndex < numbers.length; maxFindIndex ++){
+        for(int maxFindIndex = 1; maxFindIndex < numbers.length; maxFindIndex ++){
             if(maxValue < numbers[maxFindIndex]){
                 maxIndex = maxFindIndex;
                 maxValue = numbers[maxFindIndex];
