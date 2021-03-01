@@ -22,6 +22,20 @@ public class Main {
         return FibonacciValue;
     }
 
+    public static void displayFibonacci(int n){
+        for(int display = 1; display <= n; display ++){
+            System.out.print(getFibonacciValueByNumber(display) + " ; ");
+        }
+    }
+
+    public static void displayFibonacciFromKToJ(int k , int j){
+        if(k < j){
+            for(int displayKJ = k; displayKJ <= j; displayKJ ++){
+                System.out.print(getFibonacciValueByNumber(displayKJ) +  " ; ");
+            }
+        }
+    }
+
     public static int getFibonacciNumberByValue(int FibonacciValue){
         int old = 0;
         int step = 1;
@@ -42,5 +56,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Fibonacci's value: " + getFibonacciValueByNumber(9));
         System.out.println("Number: " + getFibonacciNumberByValue(21));
+        displayFibonacci(9);
+        System.out.println("\n");
+        displayFibonacciFromKToJ(5 , 9);
     }
 }
