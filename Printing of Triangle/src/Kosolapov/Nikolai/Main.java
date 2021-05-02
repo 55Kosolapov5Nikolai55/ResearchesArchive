@@ -6,10 +6,10 @@ public class Main {
 
     public static void printTriangle(int n , String element){
         for(int printIndex = 0; printIndex < n; printIndex ++){
-            for(int displayIndex = 0; displayIndex < printIndex + 1; displayIndex ++) {
+            for(int displayIndex = 0; displayIndex <= printIndex; displayIndex ++) {
                 System.out.print(element);
             }
-            System.out.println("\n");
+            System.out.println(" ");
         }
     }
 
