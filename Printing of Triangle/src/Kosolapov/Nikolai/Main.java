@@ -9,7 +9,7 @@ public class Main {
             for(int displayIndex = 0; displayIndex <= printIndex; displayIndex ++) {
                 System.out.print(element);
             }
-            System.out.println(" ");
+            System.out.println("");
         }
     }
 
