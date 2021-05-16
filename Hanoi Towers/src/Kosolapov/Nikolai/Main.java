@@ -15,6 +15,10 @@ public class Main {
 
 
     public static void transfer(int towerHeight, int from, int to) {
+        if(towerHeight == 0){
+            System.out.println("Disks are missing.");
+            return;
+        }
         if (from >= 1 && from <= 3 && to >= 1 && to <= 3) {
             if (from == to) {
                 System.out.println("All disks remain in their place.");
